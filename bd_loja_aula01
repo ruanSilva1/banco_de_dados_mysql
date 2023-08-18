@@ -1,0 +1,17 @@
+create database loja;
+use loja;
+
+create table produtos(
+id int primary key auto_increment,
+nome varchar(100) not null,
+valor numeric(9,2) not null,
+quantidade int not null
+);
+
+insert into produtos(nome, valor, quantidade)values('Manga','4.99','1');
+
+select * from produtos;
+
+update produtos set nome='Bolacha', valor='4.50', quantidade='90' where id='2';
+
+delete from produtos where id='5';
